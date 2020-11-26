@@ -1,0 +1,190 @@
+@import "./nomalize.css";
+
+/*
+	伪类，获取根元素html,这个里面是定义了变量，后面可以使用
+*/
+:root {
+	--color-text: #666;
+	--color-high-text: #ff5777;
+	/* 背景颜色 */
+	--color-tint: #ff8198;
+	--color-background: #fff;
+	--font-size: 14px;
+	--line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: "Helvetica Neue",Helvetica, "PingFang SC", "Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+	/* 禁止用户鼠标在页面上选中蚊子/图片等 */
+	user-select: none;
+	/* webkit是苹果浏览器引擎，tap点击，highlight背景最亮，color颜色，颜色用数值调节 */
+	-webkit-tap-highlight-color: transparent;
+
+	background: var(--color-background);
+
+	color: var(--color-text);
+
+	width: 100vm;
+}
+
+/*
+ * IE 10 激活转态有背景色
+ * 去掉默认的下划线
+ */
+a {
+	text-decoration: none;
+	background-color: transparent;
+	color: var(--color-text);
+}
+
+.clearfix::after {
+	display: block;
+	clear: both;
+	content: "";
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.clear-fix {
+	zoom: 1;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* 上面都是老师写的，下面的是网上的经过筛选 */
+
+/*语义化标签*/
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td,
+input,
+button,
+optgroup,
+textarea,
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+
+
+img {
+	border-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed; /* 我一般会加这个，使得table里的td可以控制宽度 */
+}
+
+
+input {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+input::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+input::-ms-input-placeholder {
+	color: #ccc;
+}
+
+input::-moz-placeholder {
+	color: #ccc;
+}
+
+input[type=submit],
+input[type=button] {
+	cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+	cursor: default;
+}
+
+button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+
+.fl {
+	float: left !important;
+}
+
+.fr {
+	float: right !important;
+}
+
+.fn {
+	float: none !important;
+}
+
+

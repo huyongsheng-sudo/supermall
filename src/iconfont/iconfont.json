@@ -1,0 +1,16 @@
+{
+  "id": "2229322",
+  "name": "superIcon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3069808",
+      "name": "勾",
+      "font_class": "tick",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}
