@@ -26,7 +26,8 @@
     },
     methods: {
       imgLoad() {
-        this.$bus.$emit('itemImageLoad');
+        // this.$bus.$emit('itemImageLoad');
+        this.$bus.$emit('homeImageLoad');
       }
     }
   }

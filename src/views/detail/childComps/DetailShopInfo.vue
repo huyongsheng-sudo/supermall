@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="DetailShopInfo">
+
     <div class="top">
       <img class="logo" :src="shop.logo" />
       <div class="name">{{shop.name}}</div>
@@ -28,15 +29,15 @@
 
           <span v-if="item.isBetter" class="item-height-true">
             <div class="high">高</div>
-           </span>
+          </span>
           <span v-else class="item-height-false">
             <div class="low">低</div>
-           </span>
+          </span>
         </div>
       </div>
 
-
     </div>
+    <button id="shop">进店逛逛</button>
   </div>
 </template>
 
@@ -46,22 +47,22 @@
     props: {
       shop: {
         type: Object,
-        default() {
+        default () {
           return {}
         }
       }
     },
     computed: {
       cSells() {
-        if(this.shop.cSells >= 10000) {
-          return (this.shop.cSells/10000).toFixed(1) + '万';
+        if (this.shop.cSells >= 10000) {
+          return (this.shop.cSells / 10000).toFixed(1) + '万';
         } else {
           return this.shop.cSells;
         }
       },
       cGoods() {
-        if(this.shop.cGoods >= 10000) {
-          return (this.shop.cGoods/10000).toFixed(1) + '万';
+        if (this.shop.cGoods >= 10000) {
+          return (this.shop.cGoods / 10000).toFixed(1) + '万';
         } else {
           return this.shop.cGoods;
         }
@@ -76,14 +77,17 @@
     /* background-color: orange; */
     height: 100px;
   }
+
   .logo {
     width: 50px;
     height: 50px;
     margin-left: 2%;
+    border-radius: 50%;
   }
 
   .top {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 2%;
     height: 50px;
     position: relative;
   }
@@ -101,7 +105,7 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
-    border-right: 2px solid rgb(100,100,100);
+    border-right: 2px solid rgb(100, 100, 100);
     /* background-color: greenyellow; */
     height: 60px;
   }
@@ -179,4 +183,22 @@
     background-color: green;
   }
 
+  #DetailShopInfo {
+    /* position: relative; */
+  }
+
+  #shop {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(244, 244, 252);
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50px);
+    /* margin-left: (50%-50px); */
+    /* position: absolute;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto; */
+  }
 </style>

@@ -12,8 +12,7 @@ const Detail = () => import('views/detail/detail.vue')
 Vue.use(VueRouter)
 
 // 创建router
-const routes = [
-  {
+const routes = [{
     path: '',
     redirect: '/home',
   },
@@ -35,7 +34,8 @@ const routes = [
   },
   {
     path: '/detail/:iid',
-    component: Detail
+    // name: 'detail',
+    component: Detail,
   },
 ];
 

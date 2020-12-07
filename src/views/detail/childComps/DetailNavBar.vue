@@ -34,6 +34,7 @@
     methods: {
       titleClick(index) {
         this.currentIndex = index;
+        this.$emit('titleClick' , index);
       },
       goBack() {
         this.$router.back();
@@ -64,6 +65,6 @@
 
   .isactive {
     color: var(--color-high-text);
-    border-bottom: 1px solid var(--color-high-text);
+    /* border-bottom: 1px solid var(--color-high-text); */
   }
 </style>

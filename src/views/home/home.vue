@@ -108,7 +108,7 @@
     mounted() {
       // 图片加载完成事件监听
       const refresh = debounce(this.$refs.scroll.refresh , 500);
-      this.$bus.$on('itemImageLoad' , () => {
+      this.$bus.$on('homeImageLoad' , () => {
         // console.log(this.$refs.scroll.refresh);
         refresh();
       })

@@ -8,3 +8,9 @@ export function getMsg(iid) {
     }
   })
 }
+
+export function getRecommend() {
+  return request({
+    url: '/recommend'
+  })
+}

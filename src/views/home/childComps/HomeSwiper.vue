@@ -37,7 +37,8 @@
     methods: {
       imgLoad() {
         // console.log("-----");
-        this.$bus.$emit('itemImageLoad');
+        // this.$bus.$emit('itemImageLoad');
+        this.$bus.$emit('homeImageLoad');
         if(!this.isLoad) {
           this.$emit('swiperImageLoad');
           this.isLoad = true;
